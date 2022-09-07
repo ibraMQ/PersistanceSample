@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Persistencia</string>
+    <string name="name">Nombre</string>
+    <string name="adrres">Direccion</string>
+    <string name="sex">Sexo:</string>
+    <string name="add">Agregar</string>
+</resources>
