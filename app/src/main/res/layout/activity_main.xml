@@ -6,99 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/rvUserList"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/nav_main_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation"/>
 
-    <EditText
-        android:id="@+id/edtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="@string/name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edtAdrres"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:ems="10"
-        android:hint="@string/adrres"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtName" />
-
-    <RadioGroup
-        android:id="@+id/rgSex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edtName">
-
-        <RadioButton
-            android:id="@+id/rbMale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="M" />
-
-        <RadioButton
-            android:id="@+id/rbFemale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="F" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:text="@string/sex"
-        app:layout_constraintBottom_toBottomOf="@+id/rgSex"
-        app:layout_constraintEnd_toStartOf="@+id/rgSex"
-        app:layout_constraintTop_toTopOf="@+id/rgSex" />
-
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/add"
-        app:layout_constraintStart_toStartOf="@+id/edtAdrres"
-        app:layout_constraintTop_toBottomOf="@+id/edtAdrres" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/purple_200"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAdd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
